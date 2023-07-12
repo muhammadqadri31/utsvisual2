@@ -217,8 +217,9 @@ object Form8: TForm8
   end
   object zqry1: TZQuery
     Connection = con1
+    Active = True
     SQL.Strings = (
-      'SELLECT *FROM riwayat_poin')
+      'SELECT * FROM riwayat_poin')
     Params = <>
     Left = 784
     Top = 96
