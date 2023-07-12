@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 192
-  Top = 125
+  Left = 201
+  Top = 364
   Width = 870
   Height = 450
-  Caption = 'Form1'
+  Caption = 'siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -257,11 +257,40 @@ object Form1: TForm1
     Top = 296
     Width = 337
     Height = 89
+    DataSource = ds1
     TabOrder = 18
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'uas2_visual_muhammadqadri_2110010130'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'D:\Kuliahhh\KULIAH QADRI\VISUAL qadri\uas visual\libmysql.dll'
+    Left = 784
+    Top = 72
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'SELECT *FROM tb_siswa')
+    Params = <>
+    Left = 784
+    Top = 128
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 784
+    Top = 192
   end
 end

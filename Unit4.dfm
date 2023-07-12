@@ -3,7 +3,7 @@ object Form4: TForm4
   Top = 125
   Width = 870
   Height = 450
-  Caption = 'Form4'
+  Caption = 'kelas'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -117,13 +117,42 @@ object Form4: TForm4
   object dbgrd1: TDBGrid
     Left = 56
     Top = 224
-    Width = 353
-    Height = 97
+    Width = 665
+    Height = 105
+    DataSource = ds1
     TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'uas2_visual_muhammadqadri_2110010130'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'D:\Kuliahhh\KULIAH QADRI\VISUAL qadri\uas visual\libmysql.dll'
+    Left = 792
+    Top = 72
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM kelas')
+    Params = <>
+    Left = 792
+    Top = 120
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 792
+    Top = 168
   end
 end

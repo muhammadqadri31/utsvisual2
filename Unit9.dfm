@@ -3,7 +3,7 @@ object Form9: TForm9
   Top = 125
   Width = 870
   Height = 450
-  Caption = 'Form9'
+  Caption = 'menu'
   Color = clActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

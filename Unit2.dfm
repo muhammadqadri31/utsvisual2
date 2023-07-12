@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 125
   Width = 870
   Height = 450
-  Caption = 'Form2'
+  Caption = 'wali kelas'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -196,11 +196,40 @@ object Form2: TForm2
     Top = 248
     Width = 329
     Height = 97
+    DataSource = ds1
     TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'uas2_visual_muhammadqadri_2110010130'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'D:\Kuliahhh\KULIAH QADRI\VISUAL qadri\uas visual\libmysql.dll'
+    Left = 784
+    Top = 64
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM wali_siswa')
+    Params = <>
+    Left = 784
+    Top = 112
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 784
+    Top = 160
   end
 end

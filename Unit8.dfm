@@ -3,7 +3,7 @@ object Form8: TForm8
   Top = 125
   Width = 870
   Height = 450
-  Caption = 'Form8'
+  Caption = 'riwayat poin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -193,11 +193,39 @@ object Form8: TForm8
     Top = 248
     Width = 313
     Height = 105
+    DataSource = ds1
     TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'uas2_visual_muhammadqadri_2110010130'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'D:\Kuliahhh\KULIAH QADRI\VISUAL qadri\uas visual\libmysql.dll'
+    Left = 784
+    Top = 40
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    SQL.Strings = (
+      'SELLECT *FROM riwayat_poin')
+    Params = <>
+    Left = 784
+    Top = 96
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 784
+    Top = 152
   end
 end
